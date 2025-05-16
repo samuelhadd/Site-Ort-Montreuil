@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demande de tuteur</title>
+  <link rel="stylesheet" href="../CSS/tuteur.css" />
+</head>
+<body>
+
+  <div class="form-container">
+    <a href="../HTML/bienvenue.html" class="back-link">← Retour à l'accueil</a>
+    <h1>Demande de tuteur</h1>
+  
+
+    <!-- Informations de l'élève -->
+<label for="nom">Nom & Prénom</label>
+<input type="text" id="nom" name="nom" placeholder="Ex : Jean Dupont" required>
+
+<label for="email">Adresse email ORT</label>
+<input type="email" id="email" name="email" placeholder="prenom.nom@ortmontreuil.fr" required>
+
+<label for="filiere">Filière / Formation</label>
+<input type="text" id="filiere" name="filiere" placeholder="Ex : BTS SIO 1A" required>
+
+<label for="telephone">Numéro de téléphone</label>
+<input type="tel" id="telephone" name="telephone" placeholder="Ex : 06 12 34 56 78" required>
+
+
+    <form action="#" method="POST">
+      <label for="matiere">Dans quelle matière avez-vous besoin d'aide ?</label>
+      <select id="matiere" name="matiere" required>
+        <option value="">Sélectionnez une matière</option>
+        <option>Mathématiques</option>
+        <option>Français</option>
+        <option>Anglais</option>
+        <option>Sciences</option>
+        <option>Comptabilité</option>
+        <option>Informatique</option>
+        <option>Management</option>
+        <option>Droit</option>
+        <option>Autre</option>
+      </select>
+      
+
+
+      <label for="difficulte">Quel type de difficulté rencontrez-vous ?</label>
+      <select id="difficulte" name="difficulte" required>
+        <option value="">Sélectionnez le type de difficulté</option>
+        <option>Compréhension des cours</option>
+        <option>Exercices pratiques</option>
+        <option>Préparation aux examens</option>
+        <option>Méthodologie</option>
+        <option>Organisation du travail</option>
+        <option>Autre</option>
+      </select>
+
+      <label for="message">Décrivez votre besoin en détail</label>
+      <textarea id="message" name="message" rows="5" placeholder="Expliquez vos difficultés et ce que vous attendez du tutorat…" required></textarea>
+
+      <button type="submit">✈️ Envoyer ma demande</button>
+    </form>
+  </div>
+
+</body>
+</html>

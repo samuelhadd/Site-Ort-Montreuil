@@ -1,0 +1,80 @@
+<!DOCTYPE html> <!-- Indique qu'on utilise le HTML5 -->
+<html lang="fr"> <!-- Langue principale du site : Français -->
+<head>
+  <meta charset="UTF-8" /> <!-- Encodage des caractères UTF-8 (accents, etc.) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Responsive sur mobile -->
+  <title>Questionnaire d'accompagnement</title> <!-- Titre affiché dans l'onglet -->
+  <link rel="stylesheet" href="../CSS/questionnaire.css" /> <!-- Fichier CSS lié pour le design -->
+</head>
+<body>
+
+  <div class="form-container">
+    <a href="../HTML/bienvenue.html" class="back-link">← Retour à l'accueil</a> <!-- Lien retour page d’accueil -->
+    <h1>Questionnaire d'accompagnement</h1> <!-- Titre principal de la page -->
+
+    <!-- Formulaire connecté à Formsubmit (adresse email de réception) -->
+    <form action="https://formsubmit.co/samuel.yabne@gmail.com" method="POST">
+
+      <!-- Champs d'identification de l'élève -->
+      <label for="nom">Nom & Prénom</label>
+      <input type="text" id="nom" name="Nom & Prénom" placeholder="Ex : Jean Dupont" required>
+
+      <label for="email">Adresse email ORT</label>
+      <input type="email" id="email" name="Email ORT" placeholder="prenom.nom@ortmontreuil.fr" required>
+
+      <label for="filiere">Filière / Formation</label>
+      <input type="text" id="filiere" name="Filière" placeholder="Ex : BTS SIO 1A" required>
+
+      <label for="telephone">Numéro de téléphone</label>
+      <input type="tel" id="telephone" name="Téléphone" placeholder="Ex : 06 12 34 56 78" required>
+
+      <!-- Choix de formation -->
+      <label for="formation">Quelle formation vous intéresse ?</label>
+      <select id="formation" name="Formation souhaitée" required>
+        <option value="">Sélectionnez une formation</option>
+        <option>3ème Générale</option>
+        <option>Bac Général</option>
+        <option>BTS Management Commercial Opérationnel</option>
+        <option>BTS Professions Immobilières</option>
+        <option>BTS Opticien Lunetier</option>
+        <option>Licence Professionnelle d'Optique</option>
+        <option>BTS Services Informatiques aux Organisations</option>
+        <option>Bachelor Développeur Web</option>
+        <option>BTM Prothésiste Dentaire</option>
+        <option>BTS Prothésiste Dentaire</option>
+        <option>DCG</option>
+        <option>DSCG</option>
+      </select>
+
+      <!-- Type de question -->
+      <label for="question-type">Quelle est votre question ?</label>
+      <select id="question-type" name="Type de question" required>
+        <option value="">Sélectionnez une question</option>
+        <option>Comment fonctionne la cantine ?</option>
+        <option>Comment obtenir les aides financières en initial/alternance ?</option>
+        <option>Comment fonctionne la licence et l'email ORT ?</option>
+        <option>Comment réinitialiser mon mot de passe ?</option>
+        <option>Comment se connecter au WiFi ?</option>
+        <option>Quand sont les prochaines JPO ?</option>
+        <option>Quels sont les événements du BDE ?</option>
+        <option>Comment se déroule l’alternance ?</option>
+        <option>Quels sont les prérequis pour chaque formation ?</option>
+        <option>Comment se passe la vie étudiante à l’ORT ?</option>
+        <option>Autre question</option>
+      </select>
+
+      <!-- Message libre -->
+      <label for="message">Votre question</label>
+      <textarea id="message" name="Message" rows="5" placeholder="Posez votre question ici..." required></textarea>
+
+      <!-- Champs cachés (optionnels mais utiles) -->
+      <input type="hidden" name="_captcha" value="false"> <!-- Désactive le Captcha -->
+      <input type="hidden" name="_next" value="https://ton-site.github.io/succes.html"> <!-- Redirection après envoi -->
+
+      <!-- Bouton d'envoi -->
+      <button type="submit">✈️ Envoyer ma demande</button>
+    </form>
+  </div>
+
+</body>
+</html>
