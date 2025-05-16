@@ -11,49 +11,57 @@ body {
   color: #333;
 }
 
-/* Bandeau principal */
+/* Bandeau principal parfaitement centré */
 .hero {
-  background: linear-gradient(90deg, #003e7e, #005DAA);
+  background: linear-gradient(to right, #1539b1, #1f50e3);
   color: white;
-  padding: 60px 20px;
+  padding: 80px 20px 60px;
+}
+
+.hero-content {
+  max-width: 1100px;
+  margin: 0 auto;
   text-align: center;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
 
 .hero p {
-  font-size: 1.1rem;
-  max-width: 1000px;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  max-width: 700px;
   margin: 0 auto 30px;
+  text-align: center;
 }
 
 .cta-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
   justify-content: center;
 }
 
 .btn {
-  background-color: #007BFF;
+  background-color: #1f50e3;
   color: white;
   padding: 12px 20px;
   border-radius: 8px;
-  text-decoration: none;
   font-weight: 500;
+  text-decoration: none;
   transition: background 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #005DAA;
+  background-color: #0c3eb4;
 }
 
 .btn.secondary {
-  background-color: #e0e8f0;
-  color: #003e7e;
+  background-color: #e6efff;
+  color: #1f50e3;
 }
 
 /* Section Formations */
@@ -183,5 +191,9 @@ footer {
   .temo-cards {
     flex-direction: column;
     align-items: center;
+  }
+
+  .hero-content {
+    text-align: center;
   }
 }
