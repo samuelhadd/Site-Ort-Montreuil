@@ -11,25 +11,26 @@
   <div class="form-container">
     <a href="../HTML/bienvenue.html" class="back-link">← Retour à l'accueil</a>
     <h1>Demande de tuteur</h1>
-  
 
-    <!-- Informations de l'élève -->
-<label for="nom">Nom & Prénom</label>
-<input type="text" id="nom" name="nom" placeholder="Ex : Jean Dupont" required>
+    <!-- Formulaire complet connecté à Formsubmit -->
+    <form action="https://formsubmit.co/samuel.yabne@gmail.com" method="POST">
 
-<label for="email">Adresse email ORT</label>
-<input type="email" id="email" name="email" placeholder="prenom.nom@ortmontreuil.fr" required>
+      <!-- Informations de l'élève -->
+      <label for="nom">Nom & Prénom</label>
+      <input type="text" id="nom" name="Nom & Prénom" placeholder="Ex : Jean Dupont" required>
 
-<label for="filiere">Filière / Formation</label>
-<input type="text" id="filiere" name="filiere" placeholder="Ex : BTS SIO 1A" required>
+      <label for="email">Adresse email ORT</label>
+      <input type="email" id="email" name="Email ORT" placeholder="prenom.nom@ortmontreuil.fr" required>
 
-<label for="telephone">Numéro de téléphone</label>
-<input type="tel" id="telephone" name="telephone" placeholder="Ex : 06 12 34 56 78" required>
+      <label for="filiere">Filière / Formation</label>
+      <input type="text" id="filiere" name="Filière" placeholder="Ex : BTS SIO 1A" required>
 
+      <label for="telephone">Numéro de téléphone</label>
+      <input type="tel" id="telephone" name="Téléphone" placeholder="Ex : 06 12 34 56 78" required>
 
-    <form action="#" method="POST">
+      <!-- Sujet de la demande -->
       <label for="matiere">Dans quelle matière avez-vous besoin d'aide ?</label>
-      <select id="matiere" name="matiere" required>
+      <select id="matiere" name="Matière concernée" required>
         <option value="">Sélectionnez une matière</option>
         <option>Mathématiques</option>
         <option>Français</option>
@@ -41,11 +42,9 @@
         <option>Droit</option>
         <option>Autre</option>
       </select>
-      
-
 
       <label for="difficulte">Quel type de difficulté rencontrez-vous ?</label>
-      <select id="difficulte" name="difficulte" required>
+      <select id="difficulte" name="Type de difficulté" required>
         <option value="">Sélectionnez le type de difficulté</option>
         <option>Compréhension des cours</option>
         <option>Exercices pratiques</option>
@@ -56,7 +55,11 @@
       </select>
 
       <label for="message">Décrivez votre besoin en détail</label>
-      <textarea id="message" name="message" rows="5" placeholder="Expliquez vos difficultés et ce que vous attendez du tutorat…" required></textarea>
+      <textarea id="message" name="Message" rows="5" placeholder="Expliquez vos difficultés et ce que vous attendez du tutorat…" required></textarea>
+
+      <!-- Redirection et options Formsubmit -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://samuelhadd.github.io/Site-Ort-Montreuil/HTML/succes.html">
 
       <button type="submit">✈️ Envoyer ma demande</button>
     </form>
