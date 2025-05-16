@@ -26,7 +26,7 @@ body {
 
 .hero p {
   font-size: 1.1rem;
-  max-width: 1000px; /* élargi */
+  max-width: 1000px;
   margin: 0 auto 30px;
 }
 
@@ -70,24 +70,38 @@ body {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* plus large */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
-  max-width: 1300px; /* élargi */
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-.card {
+.cards a.card {
+  display: block;
   background-color: #fff;
-  border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  text-align: left;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.card h3 {
-  color: #005DAA;
+.cards a.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.cards a.card h3 {
   margin-bottom: 10px;
+  color: #005DAA;
+}
+
+.cards a.card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
 }
 
 /* Témoignages */
@@ -117,14 +131,14 @@ body {
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
-  max-width: 1300px; /* élargi */
+  max-width: 1300px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
 .temo-card {
   background-color: #fff;
-  max-width: 500px; /* élargi légèrement */
+  max-width: 500px;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
