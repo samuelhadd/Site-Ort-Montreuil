@@ -8,6 +8,7 @@
 </head>
 <body>
 
+
   <header class="hero">
     <div class="hero-content">  
       <h1>Découvrez l'ORT</h1>
@@ -21,7 +22,21 @@
       </div>
     </div>
   </header>
+<div class="search-bar">
+  <input type="text" id="search" placeholder="🔍 Rechercher une formation...">
+</div>
+<script>
+  const searchInput = document.getElementById('search');
+  searchInput.addEventListener('input', function () {
+    const cards = document.querySelectorAll('.card');
+    const searchTerm = this.value.toLowerCase();
 
+    cards.forEach(card => {
+      const text = card.textContent.toLowerCase();
+      card.style.display = text.includes(searchTerm) ? 'block' : 'none';
+    });
+  });
+</script>
   <section class="formations">
     <h2>Nos Formations</h2>
     <div class="cards">
